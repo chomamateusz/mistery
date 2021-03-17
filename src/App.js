@@ -16,6 +16,13 @@ import bg from "./assets/bg.jpg"
 
 function App() {
 	const dispatch = useDispatch()
+
+  const dispatchRef = React.useRef(dispatch)
+
+  const [renderCount, setRenderCount] = React.useState(0)
+  // this proves that dispatch form useDispatch is always the same function by reference
+  console.log('RENDER APP', dispatchRef.current === dispatch)
+  
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await fetch("http://localhost:3000/documents")
@@ -28,11 +35,20 @@ function App() {
 			})
 		}
 		fetchData()
+  // only at first component mount
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	return (
 		<div>
-			<img
+
+      <button
+        onClick={()=> setRenderCount((renderCount + 1))}
+      >
+        RENDER APP ({renderCount})  
+      </button>
+			
+      <img
 				src={bg}
 				alt="#"
 				style={{
