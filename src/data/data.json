@@ -1,0 +1,145 @@
+{
+	"documents": [
+		{
+			"client": {
+				"clientName": "Łukasz Szymczyk",
+				"clientAddress": "ul. Marszałkowska 20-22/9, 00-590 Warszawa",
+				"clientNip": "814-515-55-85"
+			},
+			"paymentDate": "23-04-2021",
+			"createdAt": "13-03-2021",
+			"type": "invoice",
+			"items": [
+				{
+					"itemName": "chipsy Lays",
+					"itemPrice": "19",
+					"itemQuantity": "3",
+					"itemUnits": "szt.",
+					"itemTax": "23%"
+				},
+				{
+					"itemName": "pomidory",
+					"itemPrice": "7",
+					"itemQuantity": "10",
+					"itemUnits": "szt.",
+					"itemTax": "5%"
+				}
+			],
+			"id": 1
+		},
+		{
+			"client": {
+				"clientName": "Juliusz Cezarowicz",
+				"clientAddress": "ul. Nerona 16, 02-324 Rzym",
+				"clientNip": "987-340-91-24"
+			},
+			"paymentDate": "02-05-2021",
+			"createdAt": "15-03-2021",
+			"type": "invoice",
+			"items": [
+				{
+					"itemName": "rózga",
+					"itemPrice": "15",
+					"itemQuantity": "1",
+					"itemUnits": "szt.",
+					"itemTax": "0%"
+				},
+				{
+					"itemName": "toga",
+					"itemPrice": "130",
+					"itemQuantity": "5",
+					"itemUnits": "szt.",
+					"itemTax": "8%"
+				}
+			],
+			"id": 2
+		},
+		{
+			"client": {
+				"clientName": "Władysław Kruglow",
+				"clientAddress": "al. Czystości 5/72, 32-574 Swornegacie",
+				"clientNip": "398-653-78-34"
+			},
+			"paymentDate": "04-04-2021",
+			"createdAt": "15-03-2021",
+			"type": "invoice",
+			"items": [
+				{
+					"itemName": "środki czystości",
+					"itemPrice": "23",
+					"itemQuantity": "35",
+					"itemUnits": "kg",
+					"itemTax": "5%"
+				}
+			],
+			"id": 3
+		},
+		{
+			"client": {
+				"clientName": "Marcin Jaworski",
+				"clientAddress": "plac Reagana 15/5, 00-459, Warszawa",
+				"clientNip": "564-368-90-98"
+			},
+			"paymentDate": "16.03.2021",
+			"createdAt": "16.03.2021",
+			"type": "invoice",
+			"items": [
+				{
+					"itemName": "Pręty metalowe",
+					"itemPrice": "30",
+					"itemQuantity": "29",
+					"itemUnits": "szt",
+					"itemTax": "23%"
+				},
+				{
+					"itemName": "Wsporniki stalowe",
+					"itemPrice": "55",
+					"itemQuantity": "20",
+					"itemUnits": "szt.",
+					"itemTax": "8%"
+				}
+			],
+			"id": 4
+		},
+		{
+			"client": {
+				"clientName": "Aleksandra Janiak",
+				"clientAddress": "ul. Miła 16/8, 46-539 Szczecin",
+				"clientNip": "353-546-78-65"
+			},
+			"paymentDate": "26.03.2021",
+			"createdAt": "16.03.2021",
+			"type": "prepayment-invoice",
+			"items": [
+				{
+					"itemName": "świeczki zapachowe",
+					"itemPrice": "15",
+					"itemQuantity": "8",
+					"itemUnits": "szt.",
+					"itemTax": "5%"
+				}
+			],
+			"id": 5
+		},
+		{
+			"client": {
+				"clientName": "Mariusz Załuski",
+				"clientAddress": "al. Paderewskiego 66, 65-426 Jasło",
+				"clientNip": "975-246-21-33"
+			},
+			"paymentDate": "28.05.2021",
+			"createdAt": "16.03.2021",
+			"type": "receipt",
+			"items": [
+				{
+					"itemName": "sprzęt turystyczny",
+					"itemPrice": "325",
+					"itemQuantity": "2",
+					"itemUnits": "szt.",
+					"itemTax": "8%"
+				}
+			],
+			"id": 6
+		}
+	]
+}

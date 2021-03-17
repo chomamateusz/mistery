@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.seller-client-container {
+	display: flex;
+}
+
+.seller-client-container div {
+	width: 50%;
+}
+
+.payment-container {
+	display: flex;
+	align-items: center;
+}
+
+.payment-container h4 {
+	width: 100%;
+	text-align: right;
+	margin: 30px 15px 0 0;
+}
+
+.payment-container h5 {
+	width: 100%;
+	text-align: left;
+	margin: 30px 0 0 15px;
+}
+
+@media (max-width: 780px) {
+	.seller-client-container,
+	.payment-container {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.payment-container h4 {
+		text-align: left;
+		margin: 30px 15px;
+	}
+	.seller-client-container div {
+		width: 100%;
+	}
+}
