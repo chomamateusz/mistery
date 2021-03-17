@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { useHistory } from "react-router-dom"
 import "react-datepicker/dist/react-datepicker.css"
 import Navigation from "../Navigation"
@@ -31,6 +31,7 @@ const CreateInvoice = () => {
 	const [clientWarning, setClientWarning] = useState(false)
 	const [itemWarning, setItemWarning] = useState(false)
 	const [invoiceWarning, setInvoiceWarning] = useState(false)
+	const documentsLength = useSelector(state => state.documents.documents.length + 1)
 
 	const addItem = () => {
 		if (
@@ -69,6 +70,7 @@ const CreateInvoice = () => {
 					paymentDate: paymentDate.toLocaleDateString(),
 					createdAt: new Date().toLocaleDateString(),
 					type: docType,
+					id: documentsLength,
 				},
 			})
 			setClientWarning(false)

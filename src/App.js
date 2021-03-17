@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { useDispatch } from "react-redux"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { AuthProvider } from "./contexts/AuthContext"
 import Signup from "./components/authComponents/Signup"
@@ -14,6 +15,21 @@ import ScrollToTop from "./components/ScrollToTop"
 import bg from "./assets/bg.jpg"
 
 function App() {
+	const dispatch = useDispatch()
+	useEffect(() => {
+		const fetchData = async () => {
+			const response = await fetch("http://localhost:3000/documents")
+			const data = await response.json()
+			dispatch({
+				type: "FETCH_DATA",
+				payload: {
+					documents: data,
+				},
+			})
+		}
+		fetchData()
+	}, [])
+
 	return (
 		<div>
 			<img

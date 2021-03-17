@@ -1,7 +1,9 @@
-import data from "../data/data.json"
+// import data from "../data/data.json"
 
-export const invoiceReducer = (state = data, action) => {
+export const invoiceReducer = (state = { documents: [] }, action) => {
 	switch (action.type) {
+		case "FETCH_DATA":
+			return { ...state, documents: [...action.payload.documents] }
 		case "ADD_INVOICE":
 			const newInvoice = {
 				client: {
@@ -10,16 +12,17 @@ export const invoiceReducer = (state = data, action) => {
 				paymentDate: action.payload.paymentDate,
 				createdAt: action.payload.createdAt,
 				type: action.payload.type,
+				id: action.payload.id,
 				items: [...action.payload.items],
 			}
 
-			fetch("http://localhost:3000/documents", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(newInvoice),
-			})
+			// fetch("http://localhost:3000/documents", {
+			// 	method: "POST",
+			// 	headers: { "Content-Type": "application/json" },
+			// 	body: JSON.stringify(newInvoice),
+			// })
 
-			return { ...state, documents: [...state.documents, newInvoice] }
+			return { ...state, documents: [newInvoice, ...state.documents] }
 
 		default:
 			return state
